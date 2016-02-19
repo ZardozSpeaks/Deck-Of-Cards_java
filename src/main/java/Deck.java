@@ -7,12 +7,16 @@ public class Deck {
   private ArrayList<Card> mCards;
 
   public Deck() {
-    mCards = ArrayList<Card>();
+    mCards = new ArrayList<Card>();
     for (String suit : SUITS) {
       for (String value : VALUES) {
         Card newCard = new Card(suit,value);
-        mCardsList.add(newCard);
+        mCards.add(newCard);
       }
     }
+  }
+
+  public ArrayList<Card> getCards(){
+    return mCards;
   }
 }

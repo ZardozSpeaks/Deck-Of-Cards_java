@@ -1,11 +1,12 @@
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.ArrayList;
 
 public class DeckTest {
 
   @Test
   public void deck_initializesCorrectly() {
-    Deck testDeck = new Deck;
+    Deck testDeck = new Deck();
     assertEquals(true, testDeck instanceof Deck);
   }
 
@@ -23,14 +24,14 @@ public class DeckTest {
 
   @Test
   public void getCards_cardsAreInitalizedWithSuitsAndValues_AceOfSpades() {
-    Deck testDeck = newDeck();
+    Deck testDeck = new Deck();
     Card aceOfSpades = testDeck.getCards().get(0);
     assertEquals("Ace of Spades", aceOfSpades.name());
   }
 
   @Test
   public void getCards_deckContains52UniqueCards_kingOfDiamonds() {
-    Deck testDeck = newDeck();
+    Deck testDeck = new Deck();
     Card kingOfDiamonds = testDeck.getCards().get(51);
     assertEquals("King of Diamonds", kingOfDiamonds.name());
   }
